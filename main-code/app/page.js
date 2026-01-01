@@ -2,64 +2,69 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.js file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+     <>
+      <div className='w-[99%] h-[44vh] flex flex-col justify-center items-center gap-1'>
+        <div className=' text-white font-bold text-4xl flex flex-row justify-center items-center gap-2'>
+          <p className='h-[99%] flex justify-center items-center'>Buy me a chai!</p>
+          <span className='h-[99%] flex justify-center items-center'>
+            <img src="/images/tea.gif" alt="images not found" className='w-12.5 h-12.5'/>
+          </span>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        <p className=' text-gray-300 font-medium text-center w-[60%]'>
+          A crowdfunding platform for creators. Get funded by your fans and supporters. Start now !
+        </p>
+        <div className="flex flex-row gap-4 justify-center items-center p-4">
+          <button type="button" className="text-white bg-linear-to-br from-purple-600 to-blue-500 hover:bg-linear-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-4 py-2.5 text-center leading-5 p-0.5">Start here</button>
+          <button type="button" className="text-white bg-linear-to-br from-purple-600 to-blue-500 hover:bg-linear-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-4 py-2.5 text-center leading-5 p-0.5">Read more</button>
         </div>
-      </main>
-    </div>
+      </div>
+      <div className='w-screen h-1 bg-white opacity-10'></div>
+      <div className='w-[99%] h-[50vh] flex flex-col justify-center items-center gap-1'>
+        <div className='w-[99%] h-[10vh] flex justify-center items-center'>
+          <p className='text-white text-2xl font-bold'>Your Fans can buy a Chai</p>
+        </div>
+        <div className='w-[99%] h-[35vh] flex flex-row justify-center items-center gap-2.5'>
+          <div className='w-[32%] h-[99%] flex flex-col justify-center items-center'>
+            <div className='h-[14vh] w-[99%] flex flex-col justify-center items-center'>
+              <img src="/images/man.gif" alt="images not found" className='bg-slate-400 rounded-full p-2.5 w-17.5 h-17.5' />
+              <p className='text-white text-lg font-semibold'>Support your Creator</p>
+            </div>
+            <div className='h-[14vh] w-[99%] flex justify-center items-center'>
+              <p className='text-white text-[15px] font-semibold text-center'>Support your Creator by engaging with their content, sharing it, and providing feedback to encourage growth</p>
+            </div>
+          </div>
+          <div className='w-[32%] h-[99%] flex flex-col justify-center items-center'>
+            <div className='h-[14vh] w-[99%] flex flex-col justify-center items-center'>
+              <img src="/images/coin.gif" alt="images not found" className='bg-slate-400 rounded-full p-2.5 w-17.5 h-17.5' />
+              <p className='text-white text-lg font-semibold'>Fund Yourself</p>
+            </div>
+            <div className='h-[14vh] w-[99%] flex justify-center items-center'>
+              <p className='text-white text-[15px] font-semibold text-center'>Fund Yourself: Empower your financial independence by investing wisely and taking control of your future.</p>
+            </div>
+          </div>
+          <div className='w-[32%] h-[99%] flex flex-col justify-center items-center'>
+            <div className='h-[14vh] w-[99%] flex flex-col justify-center items-center'>
+              <img src="/images/group.gif" alt="images not found" className='bg-slate-400 rounded-full p-2.5 w-17.5 h-17.5' />
+              <p className='text-white text-lg font-semibold'>Fans want to help</p>
+            </div>
+            <div className='h-[14vh] w-[99%] flex justify-center items-center'>
+              <p className='text-white text-[15px] font-semibold text-center'>Fans eagerly step up to support, showing their dedication and passion for their favorite individual or team.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className='w-screen h-1 bg-white opacity-10'></div>
+      <div className='w-[99%] h-[50vh] flex flex-col justify-center items-center gap-1'>
+        <div className='w-[99%] h-[10vh] flex justify-center items-center'>
+          <p className='text-white text-2xl font-bold'>Learn more about us</p>
+        </div>
+        <div className='w-[99%] h-[40vh] flex flex-row justify-center items-center gap-2.5'>
+          <div className='w-[48%] h-[99%] flex justify-center items-center'>
+            <iframe src="https://www.youtube.com/embed/6v1vJGZ5IQk?si=oEDMnp9AYdYK2MS_" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" className='w-[99%] h-[99%]'></iframe>
+          </div>
+        </div>
+      </div>
+      <div className='w-screen h-1 bg-white opacity-10'></div>
+    </>
   );
 }
