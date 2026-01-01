@@ -35,7 +35,7 @@ export default function Home() {
           </div>
           <div className='w-[32%] h-[99%] flex flex-col justify-center items-center'>
             <div className='h-[14vh] w-[99%] flex flex-col justify-center items-center'>
-              <img src="/images/coin.gif" alt="images not found" className='bg-slate-400 rounded-full p-2.5 w-17.5 h-17.5' />
+              <img src="@public/images/coin.gif" alt="images not found" className='bg-slate-400 rounded-full p-2.5 w-17.5 h-17.5' />
               <p className='text-white text-lg font-semibold'>Fund Yourself</p>
             </div>
             <div className='h-[14vh] w-[99%] flex justify-center items-center'>
