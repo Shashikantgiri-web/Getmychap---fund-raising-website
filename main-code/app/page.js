@@ -7,7 +7,7 @@ export default function Home() {
         <div className=' text-white font-bold text-4xl flex flex-row justify-center items-center gap-2'>
           <p className='h-[99%] flex justify-center items-center'>Buy me a chai!</p>
           <span className='h-[99%] flex justify-center items-center'>
-            <img src="/images/tea.gif" alt="images not found" className='w-12.5 h-12.5'/>
+            <img src="/Images/tea.gif" alt="images not found" className='w-12.5 h-12.5'/>
           </span>
         </div>
         <p className=' text-gray-300 font-medium text-center w-[60%]'>
@@ -26,7 +26,7 @@ export default function Home() {
         <div className='w-[99%] h-[35vh] flex flex-row justify-center items-center gap-2.5'>
           <div className='w-[32%] h-[99%] flex flex-col justify-center items-center'>
             <div className='h-[14vh] w-[99%] flex flex-col justify-center items-center'>
-              <img src="/images/man.gif" alt="images not found" className='bg-slate-400 rounded-full p-2.5 w-17.5 h-17.5' />
+              <img src="/Images/man.gif" alt="images not found" className='bg-slate-400 rounded-full p-2.5 w-17.5 h-17.5' />
               <p className='text-white text-lg font-semibold'>Support your Creator</p>
             </div>
             <div className='h-[14vh] w-[99%] flex justify-center items-center'>
@@ -35,7 +35,7 @@ export default function Home() {
           </div>
           <div className='w-[32%] h-[99%] flex flex-col justify-center items-center'>
             <div className='h-[14vh] w-[99%] flex flex-col justify-center items-center'>
-              <img src="/images/coin.gif" alt="images not found" className='bg-slate-400 rounded-full p-2.5 w-17.5 h-17.5' />
+              <img src="/Images/coin.gif" alt="images not found" className='bg-slate-400 rounded-full p-2.5 w-17.5 h-17.5' />
               <p className='text-white text-lg font-semibold'>Fund Yourself</p>
             </div>
             <div className='h-[14vh] w-[99%] flex justify-center items-center'>
@@ -44,7 +44,7 @@ export default function Home() {
           </div>
           <div className='w-[32%] h-[99%] flex flex-col justify-center items-center'>
             <div className='h-[14vh] w-[99%] flex flex-col justify-center items-center'>
-              <img src="/images/group.gif" alt="images not found" className='bg-slate-400 rounded-full p-2.5 w-17.5 h-17.5' />
+              <img src="/Images/group.gif" alt="images not found" className='bg-slate-400 rounded-full p-2.5 w-17.5 h-17.5' />
               <p className='text-white text-lg font-semibold'>Fans want to help</p>
             </div>
             <div className='h-[14vh] w-[99%] flex justify-center items-center'>
