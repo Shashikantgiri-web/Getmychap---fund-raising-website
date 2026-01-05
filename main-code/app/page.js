@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function Home() {
+export default function Home() { 
   return (
      <>
       <div className='w-[99%] h-[44vh] flex flex-col justify-center items-center gap-1'>
