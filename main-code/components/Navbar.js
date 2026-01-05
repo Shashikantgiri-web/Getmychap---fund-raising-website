@@ -1,8 +1,13 @@
 "use client"
 import React from 'react'
+import { useState } from 'react'
 import Link from 'next/link'
+import { useSession, signIn, signOut } from "next-auth/react"
+// import Github from 'next-auth/providers/github'
 
 const Navbar = () => {
+  const { data: session } = useSession()
+  const [showdropdown, setShowDropdown] = useState(false);
   return (
     <div className='w-screen h-[10vh] flex items-center justify-center bg-gray-900'>
       <div className='w-[30%] h-[99%] flex flex-row items-center justify-start'>
@@ -18,7 +23,7 @@ const Navbar = () => {
           <Link href="/"><li className='hover:text-purple-200 hover:text-lg transition-all duration-150 ease-in-out'>Home</li></Link>
           <Link href="/"><li className='hover:text-purple-200 hover:text-lg transition-all duration-150 ease-in-out'>About</li></Link>
           <Link href="/"><li className='hover:text-purple-200 hover:text-lg transition-all duration-150 ease-in-out'>Contact</li></Link>
-          {/* <li className='relative'>{session && <>
+          <li className='relative'>{session && <>
             <button id="dropdownHoverButton" onClick={() => { setShowDropdown(!showdropdown) }} onBlur={()=>{setTimeout(()=>{setShowDropdown(false)},300)}} data-dropdown-toggle="dropdownHover" data-dropdown-trigger="hover" className="flex justify-center items-center text-white bg-linear-to-br from-purple-600 to-blue-500 hover:bg-linear-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-4 py-2.5 text-center leading-5 p-0.5" type="button">
                Welcome {session.user.email}
               <svg className="w-4 h-4 ms-1.5 -me-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m19 9-7 7-7-7" /></svg>
@@ -36,9 +41,9 @@ const Navbar = () => {
                 </li>
               </ul>
             </div>
-          </>}</li> */}
-          {/* <li>{!session && <Link href="/signin"><button type="button" className="text-white bg-linear-to-br from-purple-600 to-blue-500 hover:bg-linear-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-4 py-2.5 text-center leading-5 p-0.5">Signin</button></Link>}</li>
-          <li>{!session && <Link href="/login"><button type="button" className="text-white bg-linear-to-br from-purple-600 to-blue-500 hover:bg-linear-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-4 py-2.5 text-center leading-5 p-0.5">Login</button></Link>}</li> */}
+          </>}</li>
+          <li>{!session && <Link href="/signin"><button type="button" className="text-white bg-linear-to-br from-purple-600 to-blue-500 hover:bg-linear-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-4 py-2.5 text-center leading-5 p-0.5">Signin</button></Link>}</li>
+          <li>{!session && <Link href="/login"><button type="button" className="text-white bg-linear-to-br from-purple-600 to-blue-500 hover:bg-linear-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-4 py-2.5 text-center leading-5 p-0.5">Login</button></Link>}</li>
         </ul>
       </div>
     </div>
