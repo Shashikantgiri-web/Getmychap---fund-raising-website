@@ -6,8 +6,8 @@ const UserName = async ({ params }) => {
     <div>
       <>
         <div className='w-screen h-[350px] flex justify-center items-center relative'>
-          <img src="/images/cover.jpg" alt="bg_img" className='object-cover w-full h-full z-[-1]' />
-          <img src="/images/profile.jpg" alt="profile_img" className='w-22 h-22 rounded-full absolute -bottom-10 ring-4 ring-blue-500/50 shadow-2xl shadow-blue-700 z-1' />
+          <img src="/Images/cover.jpg" alt="bg_img" className='object-cover w-full h-full z-[-1]' />
+          <img src="/Images/profile.jpg" alt="profile_img" className='w-22 h-22 rounded-full absolute -bottom-10 ring-4 ring-blue-500/50 shadow-2xl shadow-blue-700 z-1' />
         </div>
         <div className='w-screen flex flex-col justify-center items-center gap-1 mt-13 mb-2.5'>
           <p className='w-[99%] h-[30px] flex justify-center items-center text-lg font-bold hover:text-[20px] hover:text-blue-600 transition-all duration-200'>@{username}</p>
