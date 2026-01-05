@@ -1,6 +1,17 @@
-import React from 'react'
+"use client"
+import React, { useEffect } from 'react'
+import { useSession, signIn, signOut } from "next-auth/react"
+import { useRouter } from 'next/navigation'
 
 const login = () => {
+     const { data: session } = useSession()
+    const router = useRouter()
+
+    useEffect(() => {
+        if (session) {
+            router.push('/dashboard')
+        }
+    }, [session, router])
     return (
         <div className='w-screen h-[80vh] flex justify-center items-center'>
             <div className='w-[40%] h-[60vh] ring-1 ring-white rounded-lg flex flex-col justify-center items-center'>
@@ -78,7 +89,7 @@ const login = () => {
                         <span className='text-[15px] font-semibold'>Continue with Facebook</span>
                     </button>
                     <button
-                        className="w-[60%] h-[7vh] flex items-center rounded-lg ring-1 ring-white max-w-xs px-6 py-2 text-sm font-medium text-white hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
+                        className="w-[60%] h-[7vh] flex items-center rounded-lg ring-1 ring-white max-w-xs px-6 py-2 text-sm font-medium text-white hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500" onClick={() => signIn("github")}>
                         <svg className="h-6 w-6 mr-2" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink"
                             viewBox="0 0 73 73" version="1.1">
                             <g id="team-collaboration/version-control/github" stroke="none" strokeWidth="1" fill="none"
