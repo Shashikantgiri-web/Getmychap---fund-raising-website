@@ -8,7 +8,7 @@ const Navbar = () => {
       <div className='w-[30%] h-[99%] flex flex-row items-center justify-start'>
         <Link href="/" className='flex flex-row items-center justify-start'>
           <span className='w-[30%] h-[99%] flex justify-end items-center'>
-            <img src="/images/tea.gif" alt="images not found" className='w-[50px] h-[50px] pb-1.5' />
+            <img src="/Images/tea.gif" alt="images not found" className='w-[50px] h-[50px] pb-1.5' />
           </span>
           <p className=' text-white font-bold text-2xl'>Getmychai</p>
         </Link>
