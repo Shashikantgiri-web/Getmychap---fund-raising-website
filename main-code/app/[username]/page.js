@@ -5,16 +5,16 @@ const UserName = async ({ params }) => {
   return (
     <div>
       <>
-        <div className='w-screen h-[350px] flex justify-center items-center relative'>
+        <div className='w-screen h-87.5 flex justify-center items-center relative'>
           <img src="/Images/cover.jpg" alt="bg_img" className='object-cover w-full h-full z-[-1]' />
           <img src="/Images/profile.jpg" alt="profile_img" className='w-22 h-22 rounded-full absolute -bottom-10 ring-4 ring-blue-500/50 shadow-2xl shadow-blue-700 z-1' />
         </div>
         <div className='w-screen flex flex-col justify-center items-center gap-1 mt-13 mb-2.5'>
-          <p className='w-[99%] h-[30px] flex justify-center items-center text-lg font-bold hover:text-[20px] hover:text-blue-600 transition-all duration-200'>@{username}</p>
-          <p className='w-[99%] h-[30px] flex justify-center items-center text-sm text-slate-500'>@Bio__</p>
-          <p className='w-[99%] h-[30px] flex justify-center items-center text-sm text-slate-500'>_ Payments | ₹_ Raised</p>
+          <p className='w-[99%] h-7.5 flex justify-center items-center text-lg font-bold hover:text-[20px] hover:text-blue-600 transition-all duration-200'>@{username}</p>
+          <p className='w-[99%] h-7.5 flex justify-center items-center text-sm text-slate-500'>@Bio__</p>
+          <p className='w-[99%] h-7.5 flex justify-center items-center text-sm text-slate-500'>_ Payments | ₹_ Raised</p>
         </div>
-        <div className='w-screen h-[400px] flex flex-row justify-center items-center p-[1%] gap-4'>
+        <div className='w-screen h-100 flex flex-row justify-center items-center p-[1%] gap-4'>
           <div className='w-[48%] h-[99%] flex flex-col justify-start items-center p-1 bg-gray-900 rounded-2xl shadow-xs shadow-blue-700'>
             <p className='w-[99%] h-[15%] text-lg font-bold flex justify-center items-center'>Supporters list</p>
             <ul className='w-[99%] h-[84%] flex flex-col justify-start items-start gap-1.5 pl-2 pt-0.5'>
@@ -44,9 +44,9 @@ const UserName = async ({ params }) => {
                 <button type="submit" className='w-[90%] h-[80%] flex justify-center items-center font-semibold text-white bg-linear-to-br from-purple-600 to-blue-500 hover:bg-linear-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 rounded-lg text-lg px-4 py-2.5 leading-5 p-0.5'>Pay</button>
               </div>
               <div className='w-[90%] h-[20%] flex flex-row justify-start items-center gap-1.5'>
-                <button type="submit" className='w-[100px] h-[80%] flex flex-row justify-center items-center p-1.5 bg-blue-950 rounded-lg '>Pay $10</button>
-                <button type="submit" className='w-[100px] h-[80%] flex flex-row justify-center items-center p-1.5 bg-blue-950 rounded-lg '>Pay $20</button>
-                <button type="submit" className='w-[100px] h-[80%] flex flex-row justify-center items-center p-1.5 bg-blue-950 rounded-lg '>Pay $30</button>
+                <button type="submit" className='w-25 h-[80%] flex flex-row justify-center items-center p-1.5 bg-blue-950 rounded-lg '>Pay $10</button>
+                <button type="submit" className='w-25 h-[80%] flex flex-row justify-center items-center p-1.5 bg-blue-950 rounded-lg '>Pay $20</button>
+                <button type="submit" className='w-25 h-[80%] flex flex-row justify-center items-center p-1.5 bg-blue-950 rounded-lg '>Pay $30</button>
               </div>
             </div>
           </div>
