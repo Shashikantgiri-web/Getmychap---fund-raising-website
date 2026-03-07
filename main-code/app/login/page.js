@@ -20,7 +20,7 @@ const login = () => {
                 </div>
                 <div className='w-[99%] h-[52vh] flex flex-col justify-center items-center gap-2.5'>
                     <button
-                        className="w-[60%] h-[7vh] flex items-center rounded-lg ring-1 ring-white max-w-xs px-6 py-2 text-sm font-medium text-white hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
+                        className="w-[60%] h-[7vh] flex items-center rounded-lg ring-1 ring-white max-w-xs px-6 py-2 text-sm font-medium text-white hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500" onClick={() => signIn("google")}>
                         <svg className="h-6 w-6 mr-2" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink"
                             viewBox="-0.5 0 48 48" version="1.1">
                             <g id="Icons" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">

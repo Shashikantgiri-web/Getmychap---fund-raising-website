@@ -70,4 +70,3 @@ For any questions or concerns, please contact us at [your-email@example.com](mai
 
 ## 💖 Thanks Message
 We hope you enjoy using Getmychap! This project was made possible by the contributions of many individuals and organizations. Thank you for your support!
-This is written by readme.ai so and so [readme.ai](https://readme-generator-phi.vercel.app/)
