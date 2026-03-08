@@ -12,7 +12,29 @@ const dashboard = () => {
       }
   return (
     <>
-     <div>this is dashboard</div>
+     <div className='w-screen h-87.5 flex justify-center items-center relative'>
+      <div className='w-[50%] h-[60%] flex flex-col justify-start items-center p-4 bg-gray-900 rounded-2xl shadow-xs shadow-blue-700 gap-1.5'>
+        <div className='w-[99%] h-[20%] flex flex-row justify-center items-center gap-2.5'>
+          <p>Name: {session?.user?.name}</p>
+          <input type="text" name="name" id="" placeholder='Enter your Name' className='w-[90%] h-[80%] flex justify-start items-center p-1.5 pl-2 rounded-lg bg-blue-950 hover:ring-1 hover:ring-blue-700 text-white'/>
+        </div>
+        <div className='w-[99%] h-[20%] flex flex-row justify-center items-center gap-2.5'>
+          <p>Email: {session?.user?.email}</p>
+          <input type="text" name="email" id="" placeholder='Enter your Email' className='w-[90%] h-[80%] flex justify-start items-center p-1.5 pl-2 rounded-lg bg-blue-950 hover:ring-1 hover:ring-blue-700 text-white'/>
+        </div>
+        <div className='w-[99%] h-[20%] flex flex-row justify-center items-center gap-2.5'>
+          <p>UserName</p>
+          <input type="text" name="userName" id="" placeholder='Enter your UserName' className='w-[90%] h-[80%] flex justify-start items-center p-1.5 pl-2 rounded-lg bg-blue-950 hover:ring-1 hover:ring-blue-700 text-white'/>
+        </div>
+        <div className='w-[99%] h-[20%] flex flex-row justify-center items-center gap-2.5'>
+          <p>UPI ID</p>
+          <input type="text" name="upiId" id="" placeholder='Enter your UPI ID' className='w-[90%] h-[80%] flex justify-start items-center p-1.5 pl-2 rounded-lg bg-blue-950 hover:ring-1 hover:ring-blue-700 text-white'/>
+        </div>
+        <div className='w-[99%] h-[20%] flex flex-row justify-center items-center gap-2.5'>
+          <button type="submit" className='w-25 h-[80%] flex flex-row justify-center items-center p-1.5 bg-blue-950 rounded-lg '>Save</button>
+        </div>
+      </div>
+     </div>
     </>
   )
 }
