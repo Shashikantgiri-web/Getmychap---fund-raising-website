@@ -24,7 +24,7 @@ const dashboard = () => {
         </div>
         <div className='w-[99%] h-[20%] flex flex-col justify-center items-start gap-2.5'>
           <p>UserName:</p>
-          <input type="text" name="userName" id="" placeholder={session?.user?.userName} className='w-[90%] h-[80%] flex justify-start items-center p-1.5 pl-2 rounded-lg bg-blue-950 hover:ring-1 hover:ring-blue-700 text-white'/>
+          <input type="text" name="userName" id="" placeholder={session?.user?.name} className='w-[90%] h-[80%] flex justify-start items-center p-1.5 pl-2 rounded-lg bg-blue-950 hover:ring-1 hover:ring-blue-700 text-white'/>
         </div>
         <div className='w-[99%] h-[20%] flex flex-col justify-center items-start gap-2.5'>
           <p>UPI ID</p>
