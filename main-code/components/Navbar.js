@@ -21,7 +21,7 @@ const Navbar = () => {
       <div className='w-[70%] h-[99%] flex items-center justify-end'>
         <ul className='w-[99%] md:w-[80%] h-[99%] flex items-center justify-around text-white '>
           <Link href="/"><li className='hover:text-purple-200 hover:text-lg transition-all duration-150 ease-in-out'>Home</li></Link>
-          <Link href="/about"><li className='hover:text-purple-200 hover:text-lg transition-all duration-150 ease-in-out'>About</li></Link>
+          <Link href="/About"><li className='hover:text-purple-200 hover:text-lg transition-all duration-150 ease-in-out'>About</li></Link>
           <Link href="/contact"><li className='hover:text-purple-200 hover:text-lg transition-all duration-150 ease-in-out'>Contact</li></Link>
           <li className='relative'>{session && <>
             <button id="dropdownHoverButton" onClick={() => { setShowDropdown(!showdropdown) }} onBlur={() => { setTimeout(() => { setShowDropdown(false) }, 300) }} data-dropdown-toggle="dropdownHover" data-dropdown-trigger="hover" className="flex justify-center items-center text-white bg-linear-to-br from-purple-600 to-blue-500 hover:bg-linear-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-4 py-2.5 text-center leading-5 p-0.5" type="button">
@@ -33,9 +33,9 @@ const Navbar = () => {
                 <Link href="/dashboard"><li className="hover:bg-blue-800 hover:text-white rounded-2xl w-[95%] h-[10%] p-2 flex items-center justify-center">
                   Dashboard
                 </li></Link>
-                <li className="hover:bg-blue-800 hover:text-white rounded-2xl w-[95%] h-[10%] p-2 flex items-center justify-center">
-                  <Link href={`/${session.user.name}`} className=" text-white">Your Page</Link>
-                </li>
+                <Link href={`/${session.user.name}`}><li className="hover:bg-blue-800 hover:text-white rounded-2xl w-[95%] h-[10%] p-2 flex items-center justify-center">
+                  Your Page
+                </li></Link>
                 <li className="hover:bg-blue-800 hover:text-white rounded-2xl w-[95%] h-[10%] p-2 flex items-center justify-center" onClick={() => { signOut() }}>
                   <Link href="#" className=" text-white">Log out</Link>
                 </li>

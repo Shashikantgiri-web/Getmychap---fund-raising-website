@@ -6,6 +6,9 @@ import TwitterProvider from 'next-auth/providers/twitter'
 import FacebookProvider from 'next-auth/providers/facebook'
 import GoogleProvider from 'next-auth/providers/google'
 // import EmailProvider from 'next-auth/providers/email'
+import mongoose from 'mongoose'
+import User from '@/models/User'
+import Payment from '@/models/payment'
 
 export const authoptions = NextAuth({
     providers: [
@@ -39,7 +42,46 @@ export const authoptions = NextAuth({
         //     server: process.env.MAIL_SERVER,
         //     from: 'NextAuth.js <no-reply@example.com>'
         // }),
-    ]
+    ],
+    callbacks: {
+        async signIn({ user, account, profile, email, credentials }) {
+            if (account.provider === 'github') {
+                const client = await mongoose.connect("https://cloud.mongodb.com/v2/69b185f823aca5080a841ed5#/clusters/detail/getme-a-chain/collections/getme-a-chain%2Eusers/insertOne")
+                const currentUser = User.findOne({ email: user.email })
+                if (!currentUser) {
+                    const newUser = new User({ 
+                        email: user.email, 
+                        name: user.email.split('@')[0],
+                        userName: user.name,
+                        upiId: user.upiID
+                     })
+                    await newUser.save()
+                    user.name= newUser.userName
+                }
+                else {
+                    user.name = currentUser.userName
+                }
+            }
+            if (account.provider === 'google') {
+                const client = await mongoose.connect("https://cloud.mongodb.com/v2/69b185f823aca5080a841ed5#/clusters/detail/getme-a-chain/collections/getme-a-chain%2Eusers/insertOne")
+                const currentUser = User.findOne({ email: user.email })
+                if (!currentUser) {
+                    const newUser = new User({ 
+                        email: user.email, 
+                        name: user.email.split('@')[0],
+                        userName: user.name,
+                        upiId: user.upiID
+                     })
+                    await newUser.save()
+                    user.name= newUser.userName
+                }
+                else {
+                    user.name = currentUser.userName
+                }
+                return true
+            }
+        },
+    }
 })
 
 export { authoptions as GET, authoptions as POST }
