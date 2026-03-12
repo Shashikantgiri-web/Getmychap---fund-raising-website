@@ -8,7 +8,7 @@ import GoogleProvider from 'next-auth/providers/google'
 // import EmailProvider from 'next-auth/providers/email'
 import mongoose from 'mongoose'
 import User from '@/models/User'
-import Payment from '@/models/payment'
+// import Payment from '@/models/payment'
 
 export const authoptions = NextAuth({
     providers: [
@@ -61,6 +61,7 @@ export const authoptions = NextAuth({
                 else {
                     user.name = currentUser.userName
                 }
+                return true     
             }
             if (account.provider === 'google') {
                 const client = await mongoose.connect("https://cloud.mongodb.com/v2/69b185f823aca5080a841ed5#/clusters/detail/getme-a-chain/collections/getme-a-chain%2Eusers/insertOne")
