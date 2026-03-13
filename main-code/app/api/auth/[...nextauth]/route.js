@@ -10,7 +10,14 @@ import mongoose from 'mongoose'
 import User from '@/models/User'
 // import Payment from '@/models/payment'
 
+// lib/db.js or similar would be better, but keeping it simple for now
+const connectDB = async () => {
+    if (mongoose.connection.readyState >= 1) return;
+    return mongoose.connect(process.env.MONGODB_URI);
+}
+
 export const authoptions = NextAuth({
+    secret: process.env.NEXTAUTH_SECRET,
     providers: [
         // OAuth authentication providers...
         AppleProvider({
@@ -44,43 +51,21 @@ export const authoptions = NextAuth({
         // }),
     ],
     callbacks: {
-        async signIn({ user, account, profile, email, credentials }) {
-            if (account.provider === 'github') {
-                const client = await mongoose.connect("https://cloud.mongodb.com/v2/69b185f823aca5080a841ed5#/clusters/detail/getme-a-chain/collections/getme-a-chain%2Eusers/insertOne")
-                const currentUser = User.findOne({ email: user.email })
+        async signIn({ user, account }) {
+            if (account.provider === 'github' || account.provider === 'google') {
+                await connectDB();
+                const currentUser = await User.findOne({ email: user.email })
                 if (!currentUser) {
-                    const newUser = new User({ 
-                        email: user.email, 
-                        name: user.email.split('@')[0],
-                        userName: user.name,
-                        upiId: user.upiID
-                     })
+                    const newUser = new User({
+                        email: user.email,
+                        name: user.name || user.email.split('@')[0],
+                        userName: user.email.split('@')[0],
+                    })
                     await newUser.save()
-                    user.name= newUser.userName
-                }
-                else {
-                    user.name = currentUser.userName
-                }
-                return true     
-            }
-            if (account.provider === 'google') {
-                const client = await mongoose.connect("https://cloud.mongodb.com/v2/69b185f823aca5080a841ed5#/clusters/detail/getme-a-chain/collections/getme-a-chain%2Eusers/insertOne")
-                const currentUser = User.findOne({ email: user.email })
-                if (!currentUser) {
-                    const newUser = new User({ 
-                        email: user.email, 
-                        name: user.email.split('@')[0],
-                        userName: user.name,
-                        upiId: user.upiID
-                     })
-                    await newUser.save()
-                    user.name= newUser.userName
-                }
-                else {
-                    user.name = currentUser.userName
                 }
                 return true
             }
+            return true;
         },
     }
 })
