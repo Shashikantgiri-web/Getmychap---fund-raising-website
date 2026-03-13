@@ -5,6 +5,7 @@ const UserSchema = new Schema({
     name: { type: String, required: true },
     email: { type: String, required: true },
     userName: { type: String },
+    image: { type: String },
     upiId: { type: String },
     createdAt: { type: Date, default: Date.now },
     updatedAt: { type: Date, default: Date.now }
