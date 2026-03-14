@@ -7,14 +7,7 @@ import FacebookProvider from 'next-auth/providers/facebook'
 import GoogleProvider from 'next-auth/providers/google'
 // import EmailProvider from 'next-auth/providers/email'
 import mongoose from 'mongoose'
-import User from '@/models/User'
-// import Payment from '@/models/payment'
-
-// lib/db.js or similar would be better, but keeping it simple for now
-const connectDB = async () => {
-    if (mongoose.connection.readyState >= 1) return;
-    return mongoose.connect(process.env.MONGODB_URI);
-}
+import connectDB from '@/lib/db';
 
 export const authoptions = NextAuth({
     secret: process.env.NEXTAUTH_SECRET,
