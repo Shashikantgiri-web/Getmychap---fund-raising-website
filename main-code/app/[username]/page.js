@@ -7,9 +7,9 @@ import ProfileClient from './ProfileClient' // We will extract the client part
 const UserName = async ({ params }) => {
   const { username } = await params
 
-  // Fetch data server-side
+  // Fetch data server-side (case-insensitive)
   await connectDB()
-  const user = await User.findOne({ userName: username }).lean()
+  const user = await User.findOne({ userName: new RegExp(`^${username}$`, 'i') }).lean()
   
   if (!user) {
     return (

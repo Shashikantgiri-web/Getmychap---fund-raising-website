@@ -15,8 +15,8 @@ export async function POST(req) {
 
     await connectDB();
 
-    // Verify the receiving user exists
-    const receiver = await User.findOne({ userName: to_user });
+    // Verify the receiving user exists (case-insensitive)
+    const receiver = await User.findOne({ userName: new RegExp(`^${to_user}$`, 'i') });
     if (!receiver) {
       return NextResponse.json({ error: "Receiving user not found" }, { status: 404 });
     }
