@@ -8,6 +8,7 @@ import GoogleProvider from 'next-auth/providers/google'
 // import EmailProvider from 'next-auth/providers/email'
 import mongoose from 'mongoose'
 import connectDB from '@/lib/db';
+import User from '@/models/User';
 
 export const authoptions = NextAuth({
     secret: process.env.NEXTAUTH_SECRET,
