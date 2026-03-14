@@ -6,21 +6,22 @@ import ProfileClient from './ProfileClient' // We will extract the client part
 
 const UserName = async ({ params }) => {
   const { username } = await params
+  const decodedUsername = decodeURIComponent(username);
 
   // Fetch data server-side (case-insensitive)
   await connectDB()
-  const user = await User.findOne({ userName: new RegExp(`^${username}$`, 'i') }).lean()
+  const user = await User.findOne({ userName: new RegExp(`^${decodedUsername}$`, 'i') }).lean()
   
   if (!user) {
     return (
       <div className="w-screen h-[60vh] flex justify-center items-center text-white text-2xl">
-        User @{username} not found
+        User @{decodedUsername} not found
       </div>
     )
   }
 
   // Fetch successful payments for this user
-  const payments = await Payment.find({ to_user: username, done: true }).sort({ createdAt: -1 }).lean()
+  const payments = await Payment.find({ to_user: decodedUsername, done: true }).sort({ createdAt: -1 }).lean()
   const totalRaised = payments.reduce((sum, p) => sum + p.amount, 0)
 
   // Serialize MongoDB ObjectIds to strings before passing to Client Component

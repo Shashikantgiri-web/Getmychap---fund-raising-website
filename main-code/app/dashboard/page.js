@@ -78,10 +78,10 @@ const dashboard = () => {
         </div>
         <div className='w-[99%] flex flex-col justify-center items-start gap-1'>
           <p>UPI ID</p>
-          <input type="text" name="upiId" value={formData.upiId} onChange={handleChange} placeholder='Enter your UPI ID' className='w-[90%] flex justify-start items-center p-2 pl-2 rounded-lg bg-blue-950 hover:ring-1 hover:ring-blue-700 text-white'/>
+          <input type="text" name="upiId" value={formData.upiId} onChange={handleChange} placeholder={session?.user?.upiId || 'Enter your UPI ID'} className='w-[90%] flex justify-start items-center p-2 pl-2 rounded-lg bg-blue-950 hover:ring-1 hover:ring-blue-700 text-white'/>
         </div>
         <div className='w-[99%] flex flex-col justify-center items-start gap-2.5 mt-4'>
-          <button type="submit" disabled={loading} className='w-full max-w-[200px] flex flex-row justify-center items-center py-2 bg-blue-600 hover:bg-blue-700 disabled:bg-blue-800 rounded-lg text-white font-semibold transition-colors'>
+          <button type="submit" disabled={loading} className='w-full max-w-50 flex flex-row justify-center items-center py-2 bg-blue-600 hover:bg-blue-700 disabled:bg-blue-800 rounded-lg text-white font-semibold transition-colors'>
             {loading ? 'Saving...' : 'Save'}
           </button>
         </div>
