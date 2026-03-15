@@ -3,12 +3,10 @@ import GithubProvider from 'next-auth/providers/github'
 import GoogleProvider from 'next-auth/providers/google'
 import EmailProvider from "next-auth/providers/email"
 import mongoose from 'mongoose'
-import connectDB, { clientPromise } from '@/lib/db';
+import connectDB from '@/lib/db';
 import User from '@/models/User';
-import { MongoDBAdapter } from "@auth/mongodb-adapter"
 
 export const authoptions = NextAuth({
-    adapter: MongoDBAdapter(clientPromise),
     secret: process.env.NEXTAUTH_SECRET,
     providers: [
         // OAuth authentication providers...
@@ -27,24 +25,19 @@ export const authoptions = NextAuth({
         // }),
     ],
     callbacks: {
-        async signIn({ user, account, profile }) {
-            await connectDB();
-            let currentUser = await User.findOne({ email: user.email });
-
-            if (currentUser) {
-                // NextAuth may have created the user, but we need to ensure our custom field 'userName' exists
-                if (!currentUser.userName) {
-                    currentUser.userName = user.email.split('@')[0];
-                    await currentUser.save();
+        async signIn({ user, account }) {
+            if (account.provider === 'github' || account.provider === 'google') {
+                await connectDB();
+                const currentUser = await User.findOne({ email: user.email })
+                if (!currentUser) {
+                    const newUser = new User({
+                        email: user.email,
+                        name: user.name || user.email.split('@')[0],
+                        userName: user.email.split('@')[0],
+                    })
+                    await newUser.save()
                 }
-            } else {
-                // If user doesn't exist, create it manually
-                const newUser = new User({
-                    email: user.email,
-                    name: user.name || user.email.split('@')[0],
-                    userName: user.email.split('@')[0],
-                });
-                await newUser.save();
+                return true
             }
             return true;
         },
