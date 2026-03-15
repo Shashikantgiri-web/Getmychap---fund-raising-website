@@ -4,7 +4,7 @@ import Link from 'next/link'
 export default function Home() { 
   return (
      <>
-      <div className='w-[99%] h-[44vh] flex flex-col justify-center items-center gap-1'>
+      <div className='w-[99%] md:h-[44vh] h-[200vh] flex flex-col justify-center items-center gap-1'>
         <div className=' text-white font-bold text-4xl flex flex-row justify-center items-center gap-2'>
           <p className='h-[99%] flex justify-center items-center'>Buy me a chai!</p>
           <span className='h-[99%] flex justify-center items-center'>
@@ -24,8 +24,8 @@ export default function Home() {
         <div className='w-[99%] h-[10vh] flex justify-center items-center'>
           <p className='text-white text-2xl font-bold'>Your Fans can buy a Chai</p>
         </div>
-        <div className='w-[99%] h-[35vh] flex flex-row justify-center items-center gap-2.5'>
-          <div className='w-[32%] h-[99%] flex flex-col justify-center items-center'>
+        <div className='w-[99%] h-[90vh] md:h-[35vh] flex flex-col md:flex-row justify-center items-center gap-2.5'>
+          <div className='w-[99%] md:w-[32%] h-[99%] flex flex-col justify-center items-center'>
             <div className='h-[14vh] w-[99%] flex flex-col justify-center items-center'>
               <img src="/Images/man.gif" alt="images not found" className='bg-slate-400 rounded-full p-2.5 w-17.5 h-17.5' />
               <p className='text-white text-lg font-semibold'>Support your Creator</p>
@@ -34,7 +34,7 @@ export default function Home() {
               <p className='text-white text-[15px] font-semibold text-center'>Support your Creator by engaging with their content, sharing it, and providing feedback to encourage growth</p>
             </div>
           </div>
-          <div className='w-[32%] h-[99%] flex flex-col justify-center items-center'>
+          <div className='w-[99%] md:w-[32%] h-[99%] flex flex-col justify-center items-center'>
             <div className='h-[14vh] w-[99%] flex flex-col justify-center items-center'>
               <img src="/Images/coin.gif" alt="images not found" className='bg-slate-400 rounded-full p-2.5 w-17.5 h-17.5' />
               <p className='text-white text-lg font-semibold'>Fund Yourself</p>
@@ -43,7 +43,7 @@ export default function Home() {
               <p className='text-white text-[15px] font-semibold text-center'>Fund Yourself: Empower your financial independence by investing wisely and taking control of your future.</p>
             </div>
           </div>
-          <div className='w-[32%] h-[99%] flex flex-col justify-center items-center'>
+          <div className='w-[99%] md:w-[32%] h-[99%] flex flex-col justify-center items-center'>
             <div className='h-[14vh] w-[99%] flex flex-col justify-center items-center'>
               <img src="/Images/group.gif" alt="images not found" className='bg-slate-400 rounded-full p-2.5 w-17.5 h-17.5' />
               <p className='text-white text-lg font-semibold'>Fans want to help</p>
