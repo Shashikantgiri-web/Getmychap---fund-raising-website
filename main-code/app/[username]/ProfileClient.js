@@ -76,7 +76,7 @@ const ProfileClient = ({ user, payments, totalRaised }) => {
   };
 
   return (
-    <>
+    <div className="w-screen h-[99%] flex flex-col items-center justify-start gap-0.5">
       <div className='w-screen h-87.5 flex justify-center items-center relative'>
         {/* Adjusted height to prevent image stretching */}
         <img src="/Images/cover.jpg" alt="bg_img" className='object-cover w-full h-full z-[-1]' />
@@ -100,7 +100,7 @@ const ProfileClient = ({ user, payments, totalRaised }) => {
       <div className='w-screen min-h-100 flex flex-col md:flex-row justify-center items-stretch p-4 gap-6 max-w-6xl mx-auto'>
 
         {/* Supporters List */}
-        <div className='w-full md:w-1/2 flex flex-col justify-start items-center p-6 bg-gray-900 rounded-2xl shadow-xs shadow-blue-700'>
+        <div className='w-full md:w-1/2 flex h-[65vh] flex-col justify-start items-center p-6 bg-gray-900 rounded-2xl shadow-xs shadow-blue-700'>
           <h2 className='w-full text-xl font-bold border-b border-gray-700 pb-2 mb-4 text-white'>Supporters list</h2>
 
           <ul className='w-full flex flex-col gap-3 overflow-y-auto max-h-100 pr-2'>
@@ -123,7 +123,7 @@ const ProfileClient = ({ user, payments, totalRaised }) => {
         </div>
 
         {/* Payment Form */}
-        <div className='w-full md:w-1/2 flex flex-col justify-start items-center p-6 bg-gray-900 rounded-2xl shadow-xs shadow-blue-700'>
+        <div className='w-full md:w-1/2 flex min-h-[65vh] flex-col justify-start items-center p-6 bg-gray-900 rounded-2xl shadow-xs shadow-blue-700'>
           <h2 className='w-full text-xl font-bold border-b border-gray-700 pb-2 mb-4 text-white'>Make Payment</h2>
 
           <form onSubmit={handlePay} className='w-full flex flex-col gap-4'>
@@ -192,9 +192,8 @@ const ProfileClient = ({ user, payments, totalRaised }) => {
             </div>
           )}
         </div>
-
       </div>
-    </>
+    </div>
   )
 }
 

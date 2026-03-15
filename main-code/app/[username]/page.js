@@ -40,7 +40,7 @@ const UserName = async ({ params }) => {
   }
 
   return (
-    <div>
+    <div className="w-screen min-h-[150vh] max-h-[200vh] flex flex-col items-center justify-start relative gap-0.5">
       <ProfileClient user={serializedUser} payments={serializedPayments} totalRaised={totalRaised} />
     </div>
   )
