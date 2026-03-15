@@ -2,7 +2,6 @@
 import React, { useEffect } from 'react'
 import { useSession, signIn, signOut } from "next-auth/react"
 import { useRouter } from 'next/navigation'
-import Link from 'next/link'
 
 const login = () => {
     const { data: session } = useSession()
@@ -64,25 +63,11 @@ const login = () => {
                         </svg>
                         <span className='text-[15px] font-semibold'>Continue with Github</span>
                     </button>
-                    <Link href="/signin">
-                        <button
-                            className="w-[60%] h-[7vh] flex items-center rounded-lg ring-1 ring-white max-w-xs px-6 py-2 text-sm font-medium text-white hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
-                            <svg className="h-6 w-6 mr-2" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink"
-                                viewBox="-1.5 0 20 20" version="1.1">
-                                <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
-                                    <g id="Dribbble-Light-Preview" transform="translate(-102.000000, -7439.000000)" className='fill-white' >
-                                        <g id="icons" transform="translate(56.000000, 160.000000)">
-                                            <path
-                                                d="M7.05,0H115.83a7.07,7.07,0,0,1,7,7.05V81.81a7,7,0,0,1-1.22,4,2.78,2.78,0,0,1-.66,1,2.62,2.62,0,0,1-.66.46,7,7,0,0,1-4.51,1.65H7.05a7.07,7.07,0,0,1-7-7V7.05A7.07,7.07,0,0,1,7.05,0Zm-.3,78.84L43.53,40.62,6.75,9.54v69.3ZM49.07,45.39,9.77,83.45h103L75.22,45.39l-11,9.21h0a2.7,2.7,0,0,1-3.45,0L49.07,45.39Zm31.6-4.84,35.46,38.6V9.2L80.67,40.55ZM10.21,5.41,62.39,47.7,112.27,5.41Z"
-                                                id="email" fill="#000000">
-                                            </path>
-                                        </g>
-                                    </g>
-                                </g>
-                            </svg>
-                            <span className='text-[15px] font-semibold'>Continue with Email</span>
-                        </button>
-                    </Link>
+                    <button
+                        className="w-[99%] h-[7vh] flex items-center rounded-lg ring-1 ring-white max-w-xs px-6 py-2 text-sm font-medium text-white hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500" onClick={() => "/signin"}>
+                        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 122.88 88.86"><title>email</title><path d="M7.05,0H115.83a7.07,7.07,0,0,1,7,7.05V81.81a7,7,0,0,1-1.22,4,2.78,2.78,0,0,1-.66,1,2.62,2.62,0,0,1-.66.46,7,7,0,0,1-4.51,1.65H7.05a7.07,7.07,0,0,1-7-7V7.05A7.07,7.07,0,0,1,7.05,0Zm-.3,78.84L43.53,40.62,6.75,9.54v69.3ZM49.07,45.39,9.77,83.45h103L75.22,45.39l-11,9.21h0a2.7,2.7,0,0,1-3.45,0L49.07,45.39Zm31.6-4.84,35.46,38.6V9.2L80.67,40.55ZM10.21,5.41,62.39,47.7,112.27,5.41Z" /></svg>
+                        <span className='text-[15px] font-semibold'>Continue with Email</span>
+                    </button>
                 </div>
             </div>
         </div>
