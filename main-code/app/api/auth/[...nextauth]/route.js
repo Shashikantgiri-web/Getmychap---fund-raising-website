@@ -20,11 +20,11 @@ export const authoptions = NextAuth({
             clientId: process.env.GITHUB_ID,
             clientSecret: process.env.GITHUB_SECRET
         }),
-        // Passwordless / email sign in
-        EmailProvider({
-            server: process.env.EMAIL_SERVER,
-            from: process.env.EMAIL_FROM
-        }),
+        // // Passwordless / email sign in
+        // EmailProvider({
+        //     server: process.env.EMAIL_SERVER,
+        //     from: process.env.EMAIL_FROM
+        // }),
     ],
     callbacks: {
         async signIn({ user, account, profile }) {
