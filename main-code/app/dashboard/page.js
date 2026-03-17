@@ -63,7 +63,7 @@ const dashboard = () => {
      <div className='w-[99%] min-h-[60%] flex flex-col justify-start items-center relative mt-10'>
       <h1 className='text-2xl font-bold text-white mb-4'>Dashboard</h1>
       {message && <p className='text-green-500 mb-2'>{message}</p>}
-      <form onSubmit={handleSubmit} className='w-[50%] flex flex-col justify-start items-center p-6 bg-gray-900 rounded-2xl shadow-xs shadow-blue-700 gap-4 mt-2.5'>
+      <form onSubmit={handleSubmit} className='w-[90%] md:w-[50%] flex flex-col justify-start items-center p-6 bg-gray-900 rounded-2xl shadow-xs shadow-blue-700 gap-4 mt-2.5'>
         <div className='w-[99%] flex flex-col justify-center items-start gap-1'>
           <p>Name:</p>
           <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder={session?.user?.name} className='w-[90%] flex justify-start items-center p-2 pl-2 rounded-lg bg-blue-950 hover:ring-1 hover:ring-blue-700 text-white'/>

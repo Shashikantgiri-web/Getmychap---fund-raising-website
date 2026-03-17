@@ -97,7 +97,7 @@ const ProfileClient = ({ user, payments, totalRaised }) => {
         </div>
       </div>
 
-      <div className='w-[99%] min-h-100 flex flex-col md:flex-row justify-center items-stretch p-4 gap-6 max-w-6xl mx-auto'>
+      <div className='w-[99%] min-h-[130vh] max-h-[185vh] md:min-h-[70vh] md:max-h-[120vh] flex flex-col md:flex-row justify-center items-stretch p-4 gap-6 max-w-6xl mx-auto'>
 
         {/* Supporters List */}
         <div className='w-full md:w-1/2 flex h-[65vh] flex-col justify-start items-center p-6 bg-gray-900 rounded-2xl shadow-xs shadow-blue-700'>
