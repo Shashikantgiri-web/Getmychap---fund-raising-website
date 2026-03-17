@@ -76,14 +76,14 @@ const ProfileClient = ({ user, payments, totalRaised }) => {
   };
 
   return (
-    <div className="w-screen h-[99%] flex flex-col items-center justify-start gap-0.5">
-      <div className='w-screen h-87.5 flex justify-center items-center relative'>
+    <div className="w-[99%] h-[99%] flex flex-col items-center justify-start gap-0.5">
+      <div className='w-[99%] h-87.5 flex justify-center items-center relative'>
         {/* Adjusted height to prevent image stretching */}
         <img src="/Images/cover.jpg" alt="bg_img" className='object-cover w-full h-full z-[-1]' />
         <img src={user.image || "/Images/profile.jpg"} alt="profile_img" className='w-24 h-24 rounded-full absolute -bottom-12 ring-4 ring-blue-500/50 shadow-2xl shadow-blue-700 z-1 bg-gray-800' />
       </div>
 
-      <div className='w-screen flex flex-col justify-center items-center gap-1 mt-16 mb-6'>
+      <div className='w-[99%] flex flex-col justify-center items-center gap-1 mt-16 mb-6'>
         <p className='w-[99%] flex justify-center items-center text-xl font-bold hover:text-[22px] hover:text-blue-600 transition-all duration-200 text-white'>
           @{user.userName}
         </p>
@@ -97,7 +97,7 @@ const ProfileClient = ({ user, payments, totalRaised }) => {
         </div>
       </div>
 
-      <div className='w-screen min-h-100 flex flex-col md:flex-row justify-center items-stretch p-4 gap-6 max-w-6xl mx-auto'>
+      <div className='w-[99%] min-h-100 flex flex-col md:flex-row justify-center items-stretch p-4 gap-6 max-w-6xl mx-auto'>
 
         {/* Supporters List */}
         <div className='w-full md:w-1/2 flex h-[65vh] flex-col justify-start items-center p-6 bg-gray-900 rounded-2xl shadow-xs shadow-blue-700'>

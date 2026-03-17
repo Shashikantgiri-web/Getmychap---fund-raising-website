@@ -2,7 +2,7 @@ import React from 'react'
 
 const web_about = () => {
   return (
-    <div>about</div>
+    <div className='w-[99%] h-[99%] flex items-center justify-start'>about</div>
   )
 }
 

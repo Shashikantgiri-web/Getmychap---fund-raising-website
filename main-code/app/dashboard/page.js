@@ -60,7 +60,7 @@ const dashboard = () => {
 
   return (
     <>
-     <div className='w-screen min-h-[60%] flex flex-col justify-start items-center relative mt-10'>
+     <div className='w-[99%] min-h-[60%] flex flex-col justify-start items-center relative mt-10'>
       <h1 className='text-2xl font-bold text-white mb-4'>Dashboard</h1>
       {message && <p className='text-green-500 mb-2'>{message}</p>}
       <form onSubmit={handleSubmit} className='w-[50%] flex flex-col justify-start items-center p-6 bg-gray-900 rounded-2xl shadow-xs shadow-blue-700 gap-4 mt-2.5'>

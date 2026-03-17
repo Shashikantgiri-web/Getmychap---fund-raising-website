@@ -1,14 +1,14 @@
 import Image from "next/image";
 import Link from 'next/link'
 
-export default function Home() { 
+export default function Home() {
   return (
-     <>
+    <div className='w-[99%] h-[180vh] md:min-h-[150vh] md:max-h-[180vh] flex items-center justify-start'>
       <div className='w-[99%] md:h-[44vh] h-[200vh] flex flex-col justify-center items-center gap-1'>
         <div className=' text-white font-bold text-4xl flex flex-row justify-center items-center gap-2'>
           <p className='h-[99%] flex justify-center items-center'>Buy me a chai!</p>
           <span className='h-[99%] flex justify-center items-center'>
-            <img src="/Images/tea.gif" alt="images not found" className='w-12.5 h-12.5'/>
+            <img src="/Images/tea.gif" alt="images not found" className='w-12.5 h-12.5' />
           </span>
         </div>
         <p className=' text-gray-300 font-medium text-center w-[60%]'>
@@ -66,6 +66,6 @@ export default function Home() {
         </div>
       </div>
       <div className='w-screen h-1 bg-white opacity-10'></div>
-    </>
+    </div>
   );
 }

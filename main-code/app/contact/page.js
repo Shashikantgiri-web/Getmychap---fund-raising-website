@@ -2,7 +2,7 @@ import React from 'react'
 
 const contact = () => {
   return (
-    <div>contact</div>
+    <div className='w-[99%] h-[99%] flex items-center justify-start'>contact</div>
   )
 }
 

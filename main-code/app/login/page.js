@@ -13,8 +13,8 @@ const login = () => {
         }
     }, [session, router])
     return (
-        <div className='w-screen h-[80vh] flex justify-center items-center'>
-            <div className='w-[40%] h-[40vh] ring-1 ring-white rounded-lg flex flex-col justify-center items-center'>
+        <div className='w-[99%] h-[80vh] flex justify-center items-center'>
+            <div className='w-[80%] md:w-[40%] h-[40vh] ring-1 ring-white rounded-lg flex flex-col justify-center items-center'>
                 <div className='w-[99%] h-[8vh] flex justify-center items-center'>
                     <h2 className='text-lg font-semibold text-white'>Login to get your fan support you</h2>
                 </div>

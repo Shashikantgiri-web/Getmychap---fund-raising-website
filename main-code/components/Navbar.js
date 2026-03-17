@@ -9,7 +9,7 @@ const Navbar = () => {
   const { data: session } = useSession()
   const [showdropdown, setShowDropdown] = useState(false);
   return (
-    <div className='w-screen h-[10vh] flex items-center justify-center bg-gray-900'>
+    <div className='w-[99%] h-[10vh] flex items-center justify-center bg-gray-900'>
       <div className='w-[30%] h-[99%] flex flex-row items-center justify-start'>
         <Link href="/" className='flex flex-row items-center justify-start'>
           <span className='w-[30%] h-[99%] flex justify-end items-center'>
