@@ -61,7 +61,7 @@ const Navbar = () => {
           {session && <>
             <div className='relative flex flex-row items-center justify-center'>
               <button className="flex justify-center items-center text-white bg-linear-to-br from-purple-600 to-blue-500 hover:bg-linear-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-4 py-2.5 text-center leading-5 p-0.5">
-                Welcome {session.user.email}
+                {session.user.email}
               </button>
               <button id="dropdownHoverButton" onClick={() => { setShowDropdown(!showdropdown) }} onBlur={() => { setTimeout(() => { setShowDropdown(false) }, 300) }} data-dropdown-toggle="dropdownHover" data-dropdown-trigger="hover" type="button" className="flex justify-center items-center text-white bg-linear-to-br from-purple-600 to-blue-500 hover:bg-linear-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-4 py-2.5 text-center leading-5 p-0.5">
                 <svg className="w-4 h-4 ms-1.5 -me-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m19 9-7 7-7-7" />
@@ -73,8 +73,8 @@ const Navbar = () => {
                 <Link href="/"><li className="hover:bg-blue-800 hover:text-white rounded-2xl w-[95%] h-[10%] p-2 flex items-center justify-center">
                   Home
                 </li></Link>
-                <Link href="/web_about"><li className="hover:bg-blue-800 hover:text-white rounded-2xl w-[95%] h-[10%] p-2 flex items-center justify-center">
-                  About
+                <Link href="/Explore"><li className="hover:bg-blue-800 hover:text-white rounded-2xl w-[95%] h-[10%] p-2 flex items-center justify-center">
+                  Explore
                 </li></Link>
                 <Link href="/contact"><li className="hover:bg-blue-800 hover:text-white rounded-2xl w-[95%] h-[10%] p-2 flex items-center justify-center">
                   contact

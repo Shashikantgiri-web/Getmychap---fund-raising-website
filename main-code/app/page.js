@@ -19,7 +19,7 @@ export default function Home() {
           <Link href="/about"><button type="button" className="text-white bg-linear-to-br from-purple-600 to-blue-500 hover:bg-linear-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-4 py-2.5 text-center leading-5 p-0.5">Read more</button></Link>
         </div>
       </div>
-      <div className='w-screen h-1 bg-white opacity-10'></div>
+      <div className='w-[99%] h-1 bg-white opacity-10'></div>
       <div className='w-[99%] h-[170vh] md:h-[50vh] flex flex-col justify-center items-center gap-1'>
         <div className='w-[99%] h-[10vh] flex justify-center items-center'>
           <p className='text-white text-2xl font-bold'>Your Fans can buy a Chai</p>
@@ -54,7 +54,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className='w-screen h-1 bg-white opacity-10'></div>
+      <div className='w-[99%] h-1 bg-white opacity-10'></div>
       <div className='w-[99%] h-[50vh] flex flex-col justify-center items-center gap-1'>
         <div className='w-[99%] h-[10vh] flex justify-center items-center'>
           <p className='text-white text-2xl font-bold'>Learn more about us</p>
