@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <SessionWrapper>
-          <div className="w-screen min-h-[200vh] max-h-[270vh] md:min-h-screen md:max-h-[220vh] flex flex-col items-center justify-start relative gap-0.5">
+          <div className="w-screen min-h-screen max-h-[270vh] md:min-h-screen md:max-h-[220vh] flex flex-col items-center justify-start relative gap-0.5">
             <div className="absolute top-0 z-[-2] h-[99%] w-[99%] bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] bg-size-[20px_20px]"></div>
             <Navbar />
             {children}
