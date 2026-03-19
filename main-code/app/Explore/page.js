@@ -17,7 +17,7 @@ const Explore = async (props) => {
   }).lean();
 
   return (
-    <div className='min-h-screen bg-[#000d1d] text-white p-4 md:p-10'>
+    <div className='min-h-screen text-white p-4 md:p-10'>
       <div className='max-w-6xl mx-auto'>
         <h1 className='text-3xl md:text-4xl font-bold text-center mb-2 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent'>
           Explore Creators
@@ -98,4 +98,4 @@ const Explore = async (props) => {
   )
 }
 
-export default Explore
+export default Explore

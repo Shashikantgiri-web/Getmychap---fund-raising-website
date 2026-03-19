@@ -17,7 +17,7 @@ const Contact = () => {
     }
 
     return (
-        <div className='min-h-screen bg-[#000d1d] text-white flex items-center justify-center p-6'>
+        <div className='min-h-screen text-white flex items-center justify-center p-6'>
             <div className='max-w-5xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center'>
                 
                 {/* Contact Info Side */}
@@ -120,4 +120,4 @@ const Contact = () => {
     )
 }
 
-export default Contact
+export default Contact
