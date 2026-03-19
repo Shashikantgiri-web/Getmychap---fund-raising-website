@@ -25,8 +25,8 @@ const Navbar = () => {
             <Link href="/Explore"><li className='hover:text-purple-200 hover:text-lg transition-all duration-150 ease-in-out'>Explore</li></Link>
             <Link href="/contact"><li className='hover:text-purple-200 hover:text-lg transition-all duration-150 ease-in-out'>Contact</li></Link>
             <li className='relative'>{session && <>
-              <button id="dropdownHoverButton" onClick={() => { setShowDropdown(!showdropdown) }} onBlur={() => { setTimeout(() => { setShowDropdown(false) }, 300) }} data-dropdown-toggle="dropdownHover" data-dropdown-trigger="hover" className="flex justify-center items-center text-white bg-linear-to-br from-purple-600 to-blue-500 hover:bg-linear-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-4 py-2.5 text-center leading-5 p-0.5" type="button">
-                Welcome {session.user.email}
+              <button id="dropdownHoverButton" onClick={() => { setShowDropdown(!showdropdown) }} onBlur={() => { setTimeout(() => { setShowDropdown(false) }, 300) }} data-dropdown-toggle="dropdownHover" data-dropdown-trigger="hover" className="flex items-center text-heading bg-transparent box-border border border-transparent hover:bg-neutral-secondary-medium focus:ring-4 focus:ring-neutral-tertiary font-medium leading-5 rounded-base text-sm px-3 py-2 focus:outline-none" type="button">
+                {session.user.image && <img src={session.user.image} alt="profile" className='w-7 h-7 rounded-full me-1' />}
                 <svg className="w-4 h-4 ms-1.5 -me-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m19 9-7 7-7-7" /></svg>
               </button>
               <div id="dropdownHover" className={`z-10 ${showdropdown ? '' : 'hidden'} absolute right-0 flex justify-center items-center text-white bg-gray-900 shadow-xs shadow-blue-700 font-medium rounded-2xl text-sm px-4 py-2.5 text-center leading-5 p-0.5 mt-2.5`}>
@@ -60,10 +60,10 @@ const Navbar = () => {
         <div className='w-[80%] h-[99%] flex items-center justify-end'>
           {session && <>
             <div className='relative flex flex-row items-center justify-center'>
-              <button className="flex items-center text-heading bg-transparent box-border border border-transparent hover:bg-neutral-secondary-medium focus:ring-4 focus:ring-neutral-tertiary font-medium leading-5 rounded-base text-sm px-3 py-2 focus:outline-none">
+              <button className="flex items-center text-heading bg-transparent box-border border border-transparent hover:bg-neutral-secondary-medium focus:ring-4 focus:ring-neutral-tertiary font-medium leading-5 rounded-base text-sm px-3 py-2 focus:outline-none" type='button'>
                 {session.user.image && <img src={session.user.image} alt="profile" className='w-7 h-7 rounded-full me-1' />}
               </button>
-              <button data-collapse-toggle="mega-menu-full" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-body rounded-lg md:hidden hover:bg-neutral-secondary-soft hover:text-heading focus:outline-none focus:ring-2 focus:ring-default" aria-controls="mega-menu-full" aria-expanded="false">
+              <button data-collapse-toggle="mega-menu-full" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-body rounded-lg md:hidden hover:bg-neutral-secondary-soft hover:text-heading focus:outline-none focus:ring-2 focus:ring-default" aria-controls="mega-menu-full" aria-expanded="false" onClick={() => { const menu = document.getElementById('mega-menu-full'); if (menu.classList.contains('hidden')) { menu.classList.remove('hidden'); } else { menu.classList.add('hidden'); } }}>
                 <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14" /></svg>
               </button>
               <div id="mega-menu-full" class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1">
