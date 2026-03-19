@@ -65,7 +65,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className='w-screen h-1 bg-white opacity-10'></div>
+      <div className='w-[99%] h-1 bg-white opacity-10'></div>
     </div>
   );
 }
