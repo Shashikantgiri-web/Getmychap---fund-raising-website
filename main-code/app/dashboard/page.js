@@ -23,7 +23,7 @@ const dashboard = () => {
       // Initialize form with session data if available
       setFormData({
         name: session.user?.name || '',
-        userName: session.user?.name || '', // Using name as default username for now
+        userName: session.user?.userName || '', 
         upiId: session.user?.upiId || ''
       });
     }

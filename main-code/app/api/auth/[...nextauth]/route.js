@@ -6,7 +6,7 @@ import mongoose from 'mongoose'
 import connectDB from '@/lib/db';
 import User from '@/models/User';
 
-export const authoptions = NextAuth({
+export const authOptions = {
     secret: process.env.NEXTAUTH_SECRET,
     providers: [
         // OAuth authentication providers...
@@ -42,12 +42,18 @@ export const authoptions = NextAuth({
             return true;
         },
         async session({ session, token, user }) {
+            await connectDB();
             const dbUser = await User.findOne({ email: session.user.email })
-            console.log(dbUser)
-            session.user.id = dbUser._id.toString();
+            if (dbUser) {
+                session.user.id = dbUser._id.toString();
+                session.user.userName = dbUser.userName;
+                session.user.upiId = dbUser.upiId;
+            }
             return session;
         }
     }
-})
+}
 
-export { authoptions as GET, authoptions as POST }
+const handler = NextAuth(authOptions)
+
+export { handler as GET, handler as POST }
