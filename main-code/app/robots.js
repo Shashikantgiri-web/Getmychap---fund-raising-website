@@ -1,3 +1,5 @@
+// app/robots.js
+
 export default function robots() {
   return {
     rules: {
